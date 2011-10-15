@@ -17,5 +17,5 @@
 	class Yeba_Exception
 		extends Exception
 	{
-	
+		
 	} // end class Yeba_Exception
