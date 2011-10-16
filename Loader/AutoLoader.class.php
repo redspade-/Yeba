@@ -35,7 +35,7 @@
 		 *	@see	_resumeAutoLoad
 		 */
 		public static function autoLoad( $className = "" )
-		{
+		{			
 			/**
 			 *	Principle of least privilege:
 			 *	If the parameter class name is empty, bail out and throw an exception.
@@ -72,7 +72,7 @@
 		 */
 		private static function _resumeAutoLoad( $class )
 		{
-		
+			
 			/**
 			 *	Principle of least privilege:
 			 *	If the parameter class name does not have the package separator, bail out and throw an exception.
@@ -98,7 +98,7 @@
 			
 			foreach( $paths as $path ) {
 				foreach( $extensions as $extension ) {
-					$classFile = $path . DIRECTORY_SEPARATOR . $className . DIRECTORY_SEPARATOR . $extension;
+					$classFile = $path . DIRECTORY_SEPARATOR . $className . $extension;					
 					if( file_exists( $classFile ) ) {
 						return require_once( $classFile );
 					}					

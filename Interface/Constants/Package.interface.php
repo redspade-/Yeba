@@ -14,7 +14,7 @@
 	 *	@since			23:13 PM Saturday, October 15, 2011
 	 *
 	 **/
-	Yeba_Interface_Contants_Package
+	interface Yeba_Interface_Contants_Package
 	{
 		
 		/**
