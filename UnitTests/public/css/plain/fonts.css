@@ -1,0 +1,37 @@
+﻿/**
+ *	Cascading Stylesheet
+ *
+ *	fonts.css
+ *
+ *	This stylesheet contains the font layout rules.
+ *
+ *	@package		plain
+ *	@author			Jerry Brillante
+ *	@contibutor		Eric Bondoc
+ *	@quality-test	Armando Durante
+ *	@since			11:22 AM Sunday, October 16, 2011
+ */
+
+html, body {
+	font:		12px Tahoma, Verdana, Arial;
+}
+
+div {
+	font:		12px Tahoma, Verdana, Arial;
+}
+
+h2 {
+	font:		bold 15px Tahoma, Verdana, Arial;
+}
+
+h3 {
+	font:		bold 14px Tahoma, Verdana, Arial;
+}
+
+ul li {
+	font:		11px Tahoma, Verdana, Arial;
+}
+
+div.bordered {
+	font:		12px Tahoma, Verdana, Arial;
+}

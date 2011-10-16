@@ -1,0 +1,21 @@
+﻿/**
+ *	Cascading Stylesheet
+ *
+ *	borders.css
+ *
+ *	This stylesheet contains the border layout rules.
+ *
+ *	@package		plain
+ *	@author			Jerry Brillante
+ *	@contibutor		Eric Bondoc
+ *	@quality-test	Armando Durante
+ *	@since			11:54 AM Sunday, October 16, 2011
+ */
+ 
+div.bordered {
+	border:			solid 1px #B0C4DE;
+}
+
+p > code {
+	border:			solid 1px #DCDCDC;
+}

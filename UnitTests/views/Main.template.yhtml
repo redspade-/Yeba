@@ -1,0 +1,20 @@
+﻿<html>
+	<head>
+		<title>Yeba Test Cases Main</title>
+		<link href="<?php echo $baseURL; ?>public/css/plain.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<h2>Modules</h2>
+		<?php if( !empty( $modules ) ) : ?>
+		<ul>
+		<?php foreach( $modules as $key => $module ) : ?>		
+			<li>
+				<a href="<?php echo $baseURL; ?><?php echo $module; ?>"><?php echo $key; ?></a>
+			</li>	
+		<?php endforeach; ?>
+		</ul>
+		<?php else : ?>
+		No modules found.
+		<?php endif; ?>
+	</body>
+</html>

@@ -1,0 +1,39 @@
+﻿/**
+ *	Cascading Stylesheet
+ *
+ *	structure.css
+ *
+ *	This stylesheet contains the structural layout rules.
+ *
+ *	@package		plain
+ *	@author			Jerry Brillante
+ *	@contibutor		Eric Bondoc
+ *	@quality-test	Armando Durante
+ *	@since			11:21 AM Sunday, October 16, 2011
+ */
+
+html, body {
+	margin:			0;
+	padding:		0;
+}
+
+h2, h3 {
+	margin:			2px;
+	padding:		2px;
+}
+
+div {
+	margin:			5px;
+	padding:		3px;
+}
+
+div.bordered {
+	margin:			5px;
+	padding:		3px;
+}
+
+p > code {
+	margin:			2px;
+	padding:		2px;
+	background:		#F5F5F5;
+}

@@ -1,0 +1,57 @@
+﻿<html>
+	<head>
+		<title>Yeba Test Case Main - Loader</title>
+		<link href="<?php echo $baseURL; ?>public/css/plain.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<h2><?php echo $classModule; ?></h2>
+		<h3>AutoLoader Test</h3>
+		<div class="bordered">
+			Registered extensions:
+			<?php if( !empty( $registeredExtensions ) ) : ?>
+			<ul>
+			<?php foreach( $registeredExtensions as $extension ) : ?>			
+				<li><?php echo $extension; ?></li>
+			<?php endforeach; ?>
+			</ul>
+			<?php else : ?>
+			No extensions found. The exception must be thrown here.
+			<?php endif; ?>
+		</div>
+		<div class="bordered">
+			Registered autoload functions:
+			<?php if( !empty( $registeredAutoloadFunctions ) ) : ?>
+			<ul>
+			<?php foreach( $registeredAutoloadFunctions as $function ) : ?>			
+			<?php if( is_array( $function ) ) : ?>
+				<li>
+					<div>Array of autoload function - must be an array.</div>
+					<ul>
+						<?php foreach( $function as $item ) : ?>
+						<li><?php echo $item; ?></li>
+						<?php endforeach; ?>
+					</ul>
+				</li>				
+			<?php else : ?>
+				<li><?php echo $function; ?></li>
+			<?php endif; ?>				
+			<?php endforeach; ?>
+			</ul>
+			<?php else : ?>
+			No autoload functions found. The exception must be thrown here.
+			<?php endif; ?>
+		</div>
+		<div class="bordered">
+			Attempt to load an existing class..
+			<?php $testUnit = new Yeba_Test_Unit(); ?>
+			<p>
+				<code>
+				<font color="#6A5ACD">$testUnit</font> = <font color="#4169E1"><b>new</b></font> Yeba_Test_Unit();
+				</code>			
+			</p>			
+			<p>
+				$testUnit is a <b><?php echo $testUnit->getClassName(); ?></b> object.
+			</p>			
+		</div>
+	</body>
+</html>
