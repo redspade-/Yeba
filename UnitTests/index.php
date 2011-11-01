@@ -17,7 +17,8 @@
 	$baseURL = $httpProtocol . $baseDomain . $requestURI;
 	
 	$modules = array(
-						'Loader Test' => 'Loader'
+						'Loader Test' => 'Loader',
+						'Database Test' => 'Database'
 					);
 					
 	require_once( 'views' . DIRECTORY_SEPARATOR . 'Main.template.yhtml' );

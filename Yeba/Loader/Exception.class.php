@@ -14,6 +14,9 @@
 	 *	@since			23:17 PM Saturday, October 15, 2011
 	 *
 	 **/
+	 
+	 require_once( 'Yeba' . DIRECTORY_SEPARATOR . 'Exception.class.php' );
+	 
 	 class Yeba_Loader_Exception
 		extends Yeba_Exception
 	{

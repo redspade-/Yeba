@@ -1,0 +1,71 @@
+﻿<html>
+	<head>
+		<title>Yeba Test Case Main - Database</title>
+		<link href="<?php echo $baseURL; ?>public/css/plain.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<h2><?php echo $classModule; ?></h2>
+		<h3>Database Test</h3>
+		<div class="bordered">
+			Testing Composer Class( Yeba_Database_Composer )
+			<?php if( !empty( $testResult ) ) : ?>
+			<ul>
+			<?php foreach( $testResult as $key => $result ) : ?>
+				<li>
+					Using <?php echo $key; ?> Adapter
+					<?php if( is_array( $result ) && !empty( $result ) ) : ?>
+					
+					<?php if( isset( $result['setAdapterType'] ) ) : ?>
+					Testing member <b>setAdapterType</b>:
+					<p>
+						<code>
+						Yeba_Database_Composer::<font color="#4169E1">setAdapter( Yeba_Database_Composer::DB_MYSQL )</font>;
+						</code>			
+					</p>
+					<p>Result: <?php echo $result['setAdapterType']; ?></p>
+					<?php endif; ?>
+					<?php if( isset( $result['composeWithoutParameter'] ) ) : ?>
+					Testing member <b>compose</b>( without parameter ):
+					<p>
+						<code>
+						Yeba_Database_Composer::<font color="#4169E1">compose()</font>;
+						</code>			
+					</p>
+					<p>Result: <?php echo $result['composeWithoutParameter']; ?></p>
+					<?php endif; ?>
+					<?php if( isset( $result['getAdapterType'] ) ) : ?>
+					Testing member <b>getAdapterType</b>:
+					<p>
+						<code>						
+							<font color="#6A5ACD">$type</font> = Yeba_Database_Composer::<font color="#4169E1">getAdapter()</font>;
+						</code>			
+					</p>
+					<p>Result: <?php echo $result['getAdapterType']; ?></p>
+					<?php endif; ?>
+					<?php if( isset( $result['composeWithParameter'] ) ) : ?>
+					Testing member <b>compose</b>( with parameter MsSQL ):
+					<p>
+						<code>
+						Yeba_Database_Composer::<font color="#4169E1">compose( Yeba_Database_Composer::DB_MSSQL )</font>;
+						</code>			
+					</p>
+					<p>Result: <?php echo $result['composeWithParameter']; ?></p>
+					<?php endif; ?>					
+					<?php if( isset( $result['getAdapterTypeAfterCompose'] ) ) : ?>
+					Testing member <b>getAdapterType</b>( after fresh compose ):
+					<p>
+						<code>						
+							<font color="#6A5ACD">$type</font> = Yeba_Database_Composer::<font color="#4169E1">getAdapter()</font>;
+						</code>			
+					</p>
+					<p>Result: <?php echo $result['getAdapterTypeAfterCompose']; ?></p>
+					<?php endif; ?>
+					
+					<?php endif; ?>					
+				</li>
+			<?php endforeach; ?>
+			</ul>			
+			<?php endif; ?>			
+		</div>
+	</body>
+</html>
